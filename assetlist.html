@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Detail Asset List</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Main CSS -->
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+        <script src="assets/js/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+    </head>
+    <body>
+        
+        <div class="container">
+            <nav>
+                <table id="assetlist" class="assetlist" }>
+                    <tr >
+                        <th nowrap align="left">Asset Name(base on Long Name</th>
+                        <th nowrap>Description</th>
+                        <th nowrap>NFT Token ID</th>
+                        <th nowrap>Location</th>
+                        <th nowrap>Owner</th>
+                    </tr>
+                    <script>
+                        //get array from storage session
+                        let obj = JSON.parse( sessionStorage.getItem("assetbyproduct") );
+                        let list = document.getElementById("assetlist");
+                        for(var k in obj) {
+                            let row = document.createElement("tr");
+                            row.setAttribute("border", "thin solid black;")
+                            //long name
+                            let li_longname = document.createElement("td");
+                                            li_longname.setAttribute("width","100")
+                                            li_longname.setAttribute("border","2px")
+                                            li_longname.innerText = obj[k].product.longName;
+                                            row.appendChild(li_longname);
+
+                                            //description
+                                            let li_desc = document.createElement("td"); 
+                                            //li_desc.setAttribute("colspan","50")
+                                            li_desc.innerText = obj[k].product.description;
+                                            row.appendChild(li_desc);
+
+                                            //token id
+                                            let li_token = document.createElement("td");
+                                            //li_token.setAttribute("colspan","50")
+                                            li_token.innerText = "123";
+                                            row.appendChild(li_token)
+
+                                            //Location
+                                            let li_location = document.createElement("td");
+                                            //li_location.setAttribute("colspan","50")
+                                            li_location.innerText = "somewhere";
+                                            row.appendChild(li_location)
+
+                                            //owner
+                                            let li_owner = document.createElement("td");
+                                            //li_owner.setAttribute("colspan","50")
+                                            li_owner.innerText = "Jay";
+                                            row.appendChild(li_owner)
+                            
+                            list.appendChild(row);
+                        }
+                    </script>
+                </table>
+            </nav>
+        </div>
+        
+        <script src="" async defer></script>
+    </body>
+</html>
