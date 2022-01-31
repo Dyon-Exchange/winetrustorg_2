@@ -1,7 +1,7 @@
 function getProductByName() {
     // const productURL = "http://127.0.0.1:3030/public/assets/product/";
     // const productURL = "http://demo.winetrust.org:3030/public/assets/product/"
-    const productURL = "https://proxy.winetrust.org/db/public/assets/product/"
+    const productURL = "https://dev.winetrust.org/db/public/assets/product/"
     let stringQuery = document.getElementById("productsearchbyname").value;
     console.log(`${productURL}${stringQuery}`)
     fetch(`${productURL}${stringQuery}`)
