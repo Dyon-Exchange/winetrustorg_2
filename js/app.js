@@ -1,7 +1,8 @@
 function getProductByName() {
     // const productURL = "http://127.0.0.1:3030/public/assets/product/";
-    const productURL = "http://dev.winetrust.org:3030/public/assets/product/"
+    const productURL = "http://demo.winetrust.org:3030/public/assets/product/"
     let stringQuery = document.getElementById("productsearchbyname").value;
+    console.log(`${productURL}${stringQuery}`)
     fetch(`${productURL}${stringQuery}`)
     .then(data => {
         return data.json()
@@ -27,8 +28,8 @@ function getProductByName() {
 }
 
 function getAssetByTokenId() {
-    // const productURL = "http://127.0.0.1:3030/public/assets/token/";
-    const productURL = "http://demo.winetrust.org:3030/public/assets/token/"
+    const productURL = "http://127.0.0.1:3030/public/assets/token/";
+    // const productURL = "http://demo.winetrust.org:3030/public/assets/token/"
     let stringQuery = document.getElementById("assetsearchbyid").value;
     fetch(`${productURL}${stringQuery}`)
     .then(data => {
@@ -38,11 +39,11 @@ function getAssetByTokenId() {
         for(var k in results) {
             if(results[k] instanceof Object) {
                 let q = results[k].tokenId
-                //console.log(`${q} :: ${stringQuery}`)
+                console.log(`${q} :: ${JSON.stringify(results)}`)
                 //var v = new RegExp(stringQuery,"g")
-                if( stringQuery.localeCompare(q) == 0 ) {
+                /*if( stringQuery.localeCompare(q) == 0 ) {
                     console.log(`${results[k].tokenId}` );
-                }
+                }*/
             }
 
         }
