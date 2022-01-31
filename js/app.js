@@ -1,7 +1,6 @@
 function getProductByName() {
-    // const productURL = "http://127.0.0.1:3030/public/assets/product/";
-    // const productURL = "http://demo.winetrust.org:3030/public/assets/product/"
-    const productURL = "https://dev.winetrust.org/db/public/assets/product/"
+    const productURL = "http://127.0.0.1:3030/public/assets/product/";
+    // const productURL = "https://dev.winetrust.org/db/public/assets/product/"
     let stringQuery = document.getElementById("productsearchbyname").value;
     console.log(`${productURL}${stringQuery}`)
     fetch(`${productURL}${stringQuery}`)
@@ -30,7 +29,7 @@ function getProductByName() {
 
 function getAssetByTokenId() {
     const productURL = "http://127.0.0.1:3030/public/assets/token/";
-    // const productURL = "http://demo.winetrust.org:3030/public/assets/token/"
+    // const productURL = "https://dev.winetrust.org/db/public/assets/token/"
     let stringQuery = document.getElementById("assetsearchbyid").value;
     fetch(`${productURL}${stringQuery}`)
     .then(data => {
