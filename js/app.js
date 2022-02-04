@@ -5,7 +5,7 @@ async function connectMetamask() {
         //alert(`Metamask is installed`)
         let accounts = await ethereum.request({method: 'eth_requestAccounts'});
         let account = accounts[0];
-        //alert(`You are now connect with account ${account}`)
+        alert(`You are now connect with account ${account}`)
     }
 }
 
