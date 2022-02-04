@@ -1,3 +1,13 @@
+async function connectMetamask() {
+    // alert("connecting to Metamask");
+    if(typeof window.ethereum !== 'undefined') {
+        //alert(`Metamask is installed`)
+        let accounts = await ethereum.request({method: 'eth_requestAccounts'});
+        let account = accounts[0];
+        alert(`account ${account}`)
+    }
+}
+
 function getProductByName() {
     // const productURL = "http://127.0.0.1:3030/public/assets/product/";
     // const productURL = "https://dev.winetrust.org/db/public/assets/product/"

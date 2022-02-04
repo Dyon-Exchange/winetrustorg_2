@@ -35,7 +35,7 @@
     <!-- gmail verification -->
     <meta name="google-site-verification" content="" />
     <!-- Website title -->
-    <title>Home</title>
+    <title>Home - Dev</title>
     <link rel="stylesheet" href="assets/css/bootstrap-icons.css" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/jarallax.css" />
@@ -92,6 +92,7 @@
                     <li class="nav-item">
                         <a class="nav-link btn btn-primary px-4 text-light is-rounded btn-login ms-lg-2" href="#">Log In</a>
                     </li>
+                    
                 </ul>
             </div>
         </div>
@@ -123,14 +124,20 @@
                     <div>
                         <input type="search" placeholder="Enter Product Name" id="productsearchbyname" name="productsearchbyname" maxlength="100" size="100">
                         <br><br>
-                        <button type="button" class="btn btn-light py-2 px-4 fw-bold is-rounded px-4 d-inline-flex align-items-center gap-1" onClick="getProductByName()">Search By Product Name</button>
+                        <button type="button" class="nav-link btn btn-primary px-4 text-light is-rounded btn-login ms-lg-2" onClick="getProductByName()">Search By Product Name</button>
                     </div>
                     </p>
                     <br><br>
                     <p>
                     <div>
                         <input type="search" placeholder="Enter Asset Token ID" id="assetsearchbyid" name="assetsearchbyid" maxlength="100" size="100"><br><br>
-                        <button type="button" class="btn btn-light py-2 px-4 fw-bold is-rounded px-4 d-inline-flex align-items-center gap-1" onClick="getAssetByTokenId()">Search By Token ID</button>
+                        <button type="button" class="nav-link btn btn-primary px-4 text-light is-rounded btn-login ms-lg-2" onClick="getAssetByTokenId()">Search By Token ID</button>
+                    </div>
+                    </p>
+
+                    <p>
+                    <div>
+                    <button type="button" id="metamask" class="nav-link btn btn-primary px-4 text-light is-rounded btn-login ms-lg-2" onClick="connectMetamask()">Connect to Metamask</button>
                     </div>
                     </p>
 
