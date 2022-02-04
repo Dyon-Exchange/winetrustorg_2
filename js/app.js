@@ -1,10 +1,11 @@
 async function connectMetamask() {
     // alert("connecting to Metamask");
     if(typeof window.ethereum !== 'undefined') {
+        //alert(ethereum.isConnected())
         //alert(`Metamask is installed`)
         let accounts = await ethereum.request({method: 'eth_requestAccounts'});
         let account = accounts[0];
-        alert(`account ${account}`)
+        //alert(`You are now connect with account ${account}`)
     }
 }
 
